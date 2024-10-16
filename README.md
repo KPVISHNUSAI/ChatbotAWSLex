@@ -1,7 +1,3 @@
-Here’s the **README.md** updated with your **Step 2** content, rewritten for clarity and ease of understanding:
-
----
-
 # **Building Banking Chatbot using Amazon Lex**  
 
 Welcome to the **Banking Chatbot** project! This chatbot is designed to enhance the customer experience by providing real-time assistance for banking-related queries. Built with **Amazon Lex**, this intelligent conversational interface aims to automate a variety of financial tasks, ensuring customers get prompt, secure, and accurate responses to their inquiries.  
@@ -9,6 +5,11 @@ Welcome to the **Banking Chatbot** project! This chatbot is designed to enhance 
 Amazon Lex is a fully managed service from AWS that enables developers to build conversational interfaces (chatbots and voice assistants) powered by **natural language understanding (NLU)** and **automatic speech recognition (ASR)**.  
 
 ---
+
+## **Project Overview**  
+*(Coming Soon: ...)* 
+
+--- 
 
 ## **Steps to Complete the Project**  
 
@@ -94,12 +95,45 @@ Your **basic bot structure** is now complete and ready to come to life!
 💡 **Voice Tips:**  
 - The bot uses the **English (US) dialect**, so it may not perfectly transcribe other English accents.  
 - Amazon Lex supports multiple **English dialects** for better accuracy.
+### **Step 3: Managing the FallbackIntent**  
+
+1. **Navigate**: On the left-hand navigation, choose **FallbackIntent**.  
+
+💡 **What is FallbackIntent?**  
+- If the confidence score for a user input is **below 0.40**, Lex triggers the **FallbackIntent**. This intent acts as a safety net when the bot doesn't understand the user's request. It helps maintain a smooth interaction by providing a helpful error message.  
+
+2. **Customize the Fallback Message**:  
+   - Scroll to **Closing responses** and expand the speech bubble.  
+   - Update the **Message field** with the following:  
+     ```  
+     Sorry, I am having trouble understanding. Can you describe what you'd like to do in a few words?  
+     I can help you find your account balance, transfer funds, and make a payment.  
+     ```  
+
+💡 **Best Practice:**  
+- Provide hints in fallback messages about the type of commands the bot can understand. This improves the user experience by guiding users back on track.  
+
+3. **Add Variations**:  
+   - Toggle the **Variations - optional** setting.  
+   - Add this variation:  
+     ```  
+     Hmm, could you try rephrasing that? I can help you find your account balance, transfer funds, and make a payment.  
+     ```  
+   - Add one more variation to keep the bot’s responses dynamic.  
+
+💡 **What are Variations?**  
+- Variations are alternate responses. When the FallbackIntent is triggered, Lex randomly picks a variation to respond, making the chatbot sound more conversational.  
+
+4. **Save and Build**:  
+   - Click **Save intent** and then **Build** (another ~30 seconds).  
+
+5. **Test the FallbackIntent**:  
+   - Try the messages that previously failed (e.g., "Good morning" or "How are you").  
+   - Observe how the bot now provides more helpful fallback messages.  
+
+6. **Test Voice Input**:  
+   - Use the **microphone icon** to test voice input with phrases like "Hello" or "Hiya."  
+   - Remember, the bot uses the **English (US)** dialect, so accents might affect recognition. If needed, explore Lex’s **multiple English dialects** for better accuracy.
 
 ---
 
-## **Project Overview**  
-*(Coming Soon: This section will provide a complete overview once the project is finalized.)*  
-
----
-
-Let me know if this version looks good, or if you’d like any further adjustments!
