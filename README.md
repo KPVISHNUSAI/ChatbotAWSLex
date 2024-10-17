@@ -191,3 +191,8 @@ Your **basic bot structure** is now complete and ready to come to life!
 - If the bot doesn't recognize the account type immediately, try adjusting the slot synonyms for better coverage.  
 
 ---
+
+### Step 5: **Create Your AWS Lambda Function**
+💡 **What is AWS Lambda?** 
+- AWS Lambda is a service that lets you run code without provisioning or managing servers.Lambda runs your code only when needed and scales automatically, from a few requests per day to thousands per second - 
+  all you need to do is supply your code in one of the languages that Lambda supports.
