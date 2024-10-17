@@ -95,6 +95,9 @@ Your **basic bot structure** is now complete and ready to come to life!
 💡 **Voice Tips:**  
 - The bot uses the **English (US) dialect**, so it may not perfectly transcribe other English accents.  
 - Amazon Lex supports multiple **English dialects** for better accuracy.
+
+---
+
 ### **Step 3: Managing the FallbackIntent**  
 
 1. **Navigate**: On the left-hand navigation, choose **FallbackIntent**.  
@@ -137,3 +140,54 @@ Your **basic bot structure** is now complete and ready to come to life!
 
 ---
 
+### **Step 4: Create a Custom Slot for Account Types**  
+
+1. **Navigate**: On the left-hand panel, go to **Slot Types**.  
+2. **Create Slot Type**:  
+   - Click **Create slot type**.  
+   - **Name the Slot**: `AccountType`.  
+   - **Description**: Slot to capture different types of accounts (e.g., savings, checking).  
+
+3. **Add Slot Values**:  
+   - In the **Values** section, add the following options:  
+     - Savings  
+     - Checking  
+     - Credit
+          - credit card
+          - visa
+          - mastercard
+          - amex
+          - american express
+
+
+4. **Save Slot Type**:  
+   - Click **Save** to store your custom slot.  
+
+5. **Add Slot to an Intent**:  
+   - Navigate back to **Intents**.  
+   - Open the **CheckBalance Intent**.  
+   - In the **Slot section**, click **Add a slot**.  
+   - **Name**: `accountType`  
+   - **Slot Type**: Choose `accountType` from the dropdown.  
+   - **Prompt**: For which account would you like your balance?
+     ```  
+     Which account would you like to use?  
+     ```
+   - Navigate back to **Intents**
+   - Open the **CheckBalance Intent**
+   - In the **Slots pane**
+   - Click on add slot
+   - Add **name** as **dateOfBirth**
+   - Select slot type as AMAZON.Date
+   - **Prompt**: For verification purposes, what is your date of birth?
+
+6. **Test Your Slot**:  
+   - Save and build the bot.  
+   - Go to **Test** mode and try interacting with the bot:  
+     - "Transfer funds from my savings account."  
+     - "I want to move money to my credit account."  
+
+💡 **Note:**  
+- If the bot doesn't recognize the account type immediately, try adjusting the slot synonyms for better coverage.  
+
+---
